@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex; /* Alinha as divs lado a lado */
+    align-items: flex-start; /* Alinha a parte superior das divs */
+    margin: 2cm; /* Espaçamento ao redor do container */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
+}
+
+#foto-perfil {
+    width: 150px; /* Tamanho fixo para a imagem */
+    height: 150px; /* Tamanho fixo para a imagem */
+    border-radius: 50%; /* Torna a imagem circular */
+    overflow: hidden; /* Garante que a borda circular não seja ultrapassada */
+    border: 5px solid #000; /* Adiciona uma borda de 5px de espessura */
+    margin-right: 20px; /* Espaçamento entre a imagem e a caixa de texto */
+}
+
+#foto-perfil img {
+    width: 100%; /* Ajusta a imagem para preencher a div circular */
+    height: 100%; /* Ajusta a imagem para preencher a div circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+}
+
+#info-box {
+    flex: 1; /* Faz com que a caixa de texto ocupe o espaço restante */
+    width: 60%; /* Define a largura da caixa como 60% da largura do contêiner pai */
+    max-width: 100%; /* Garante que a largura máxima não exceda 100% da largura do contêiner pai */
+    padding: 15px;
+    border-radius: 10px; /* Arredonda as bordas da caixa */
+    border: 1px solid #ddd; /* Adiciona uma borda fina ao redor da caixa */
+    background-color: #f9f9f9; /* Cor de fundo da caixa */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
+}
+
+#statusdiv {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    padding: 15px;
+    border-radius: 10px; /* Arredonda as bordas da caixa */
+    border: 1px solid #ddd; /* Adiciona uma borda fina ao redor da caixa */
+    background-color: #f9f9f9; /* Cor de fundo da caixa */
+    margin: 2cm; /* Espaçamento ao redor da nova div */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
+    gap: 1%; /* Espaço entre os itens */
+}
+
+#statusdiv #titulo1 {
+    font-weight: bold; /* Define o texto como negrito */
+    font-size: 1.2em; /* Define o tamanho da fonte como um pouco maior */
+}
+
+#statusdiv #titulo2,
+#experienciadiv #titulo2 {
+    font-weight: bold; /* Define o texto como negrito */
+    font-size: 1.1em; /* Define o tamanho da fonte como um pouco menor que o título1 */
+}
+
+#experienciadiv #titulo3 {
+    font-weight: bold; /* Define o texto como negrito */
+}
+
+#statusdiv ul,
+#cursodiv ul {
+    list-style-type: disc; /* Adiciona marcadores de disco para a lista */
+    padding-left: 20px; /* Adiciona espaçamento à esquerda para a lista */
+    margin-top: 10px; /* Adiciona um espaço acima da lista */
+}
+
+#statusdiv li,
+#cursodiv li {
+    margin-bottom: 10px; /* Adiciona espaço abaixo de cada item da lista */
+}
+
+#cursodiv {
+    padding: 15px;
+    border-radius: 10px; /* Arredonda as bordas da caixa */
+    border: 1px solid #ddd; /* Adiciona uma borda fina ao redor da caixa */
+    background-color: #f9f9f9; /* Cor de fundo da caixa */
+    margin: 2cm; /* Espaçamento ao redor da nova div */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
+}
+
+#experienciadiv {
+    padding: 15px;
+    border-radius: 10px; /* Arredonda as bordas da caixa */
+    border: 1px solid #ddd; /* Adiciona uma borda fina ao redor da caixa */
+    background-color: #f9f9f9; /* Cor de fundo da caixa */
+    margin: 2cm; /* Espaçamento ao redor da nova div */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura total */
+}
+
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column; /* Alinha os itens verticalmente em telas menores */
+    }
+
+    #info-box,
+    #statusdiv,
+    #cursodiv,
+    #experienciadiv {
+        width: 100%; /* Faz com que a nova div ocupe a largura total */
+        margin-top: 20px; /* Espaço acima da nova div quando movida para baixo */
+    }
+}
